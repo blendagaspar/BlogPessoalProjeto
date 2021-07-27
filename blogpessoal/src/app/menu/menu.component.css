@@ -1,0 +1,14 @@
+.fs-16{
+
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.core{
+    background-image: url("https://i.imgur.com/HqXQuQJ.png");
+}
+
+
+a{
+    cursor: pointer;
+}

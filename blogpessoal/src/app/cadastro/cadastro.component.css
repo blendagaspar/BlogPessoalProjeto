@@ -1,0 +1,75 @@
+#img-bg{
+    background-image: url("https://i.imgur.com/HqXQuQJ.png");
+   background-position:center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height: 100vh;
+   min-width: 100vh;
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   opacity: 0.9;
+}
+
+#centro{
+    align-items: center;
+    justify-content: center;
+}
+
+main.container{
+
+    background: white;
+    min-width: 400px;
+    min-height: 40vh;
+    border-radius: 8px;
+}
+
+main h2{
+font-weight: 600;
+margin-bottom: 2rem;
+position: relative;
+}
+
+form{
+
+    display:flex;
+    flex-direction: column;
+
+}
+
+.input-field{
+    position: relative;
+}
+
+form .input-field:first-child{
+    margin-bottom: 1.5rem;
+}
+
+.input-field input{
+
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+.input-field input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"]{
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left, #4776E6, #8e54e9);
+    cursor: pointer;
+    color:white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover{
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #4776E6, #8e54e9);
+}
