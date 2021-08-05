@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -12,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 
 import { InicioComponent } from './inicio/inicio.component';
 import { CadastrarComponent } from './cadastro/cadastro.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
@@ -21,7 +24,8 @@ import { CadastrarComponent } from './cadastro/cadastro.component';
     RodapeComponent,
     LoginComponent,
     InicioComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,10 @@ import { CadastrarComponent } from './cadastro/cadastro.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,      //para não se perder nas rotas
+    useClass: HashLocationStrategy  //para não se perder nas rotas
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
