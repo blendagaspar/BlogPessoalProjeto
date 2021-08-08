@@ -6,13 +6,15 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { TemaComponent } from './tema/tema.component';
 
+
 const routes: Routes = [
 
   {path:'', redirectTo: 'login', pathMatch:'full'},
 {path: 'login', component: LoginComponent},
 {path: 'cadastro', component: CadastrarComponent},
 {path: 'inicio', component: InicioComponent},
-{path: 'tema', component:TemaComponent}
+{path: 'tema', component: TemaComponent}
+
 ];
 
 @NgModule({

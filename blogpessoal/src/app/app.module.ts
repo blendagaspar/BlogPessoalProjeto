@@ -17,6 +17,7 @@ import { CadastrarComponent } from './cadastro/cadastro.component';
 import { TemaComponent } from './tema/tema.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { TemaComponent } from './tema/tema.component';
     LoginComponent,
     InicioComponent,
     CadastrarComponent,
-    TemaComponent
+    TemaComponent,
+   
   ],
   imports: [
     BrowserModule,
