@@ -16,11 +16,32 @@ token={
 }
 
 getAllTema(): Observable<Tema[]>{
-  return this.http.get<Tema[]>('https://blogpessoalblenda.herokuapp.com/tema', this.token)
+  return this.http.get<Tema[]>('https://blogpessoalblenda.herokuapp.com/tema')
 }
 
-postTema(tema: Tema): Observable<Tema>{
-  return this.http.post<Tema>('https://blogpessoalblenda.herokuapp.com/tema', tema, this.token)
+
+getByIdTema(id:number): Observable<Tema>{
+
+  return this.http.get<Tema>( `https://blogpessoalblenda.herokuapp.com/tema/${id}`) //add  craze para funcionar em vez de aspas ``
 }
+
+
+
+postTema(tema: Tema): Observable<Tema>{
+  return this.http.post<Tema>('https://blogpessoalblenda.herokuapp.com/tema', tema)
+}
+
+
+putTema(tema: Tema): Observable<Tema>{
+  return this.http.put<Tema>('https://blogpessoalblenda.herokuapp.com/tema', tema)
+}
+
+deleteTema(id: number){
+
+  return this.http.delete(`https://blogpessoalblenda.herokuapp.com/tema/${id}`) //add  craze para funcionar em vez de aspas ``
+
+}
+
+
 
 }
