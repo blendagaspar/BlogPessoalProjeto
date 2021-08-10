@@ -33,6 +33,7 @@ idUsuario = environment.id
   ) { }
 
   ngOnInit() {
+    window.scroll(0, 0)
 
     if(environment.token==''){
       alert('sua sessão expirou, faça o login novamente!')

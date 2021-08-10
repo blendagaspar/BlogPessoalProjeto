@@ -30,8 +30,6 @@ getByIdUsuario(id: number): Observable<Usuario>{
 
 
 
-
-
 logado(){
 let ok: boolean = false
 
@@ -39,9 +37,14 @@ if (environment.token != ''){
      ok=true
 }
 return ok;
-
 }
 
+
+
+
+atualizar(usuario: Usuario):Observable<Usuario>{
+return this.http.put<Usuario>('https://blogpessoalblenda.herokuapp.com/usuarios/alterar', usuario)
+}
 
 
 
